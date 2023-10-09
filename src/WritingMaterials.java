@@ -62,7 +62,7 @@ public class WritingMaterials {
         setPrice(price);
         setDraw(draw);
     }
-    private String DaNet(boolean a){
+    protected String DaNet(boolean a){
         if(a) return "Да";
         else return "Нет";
     }
@@ -80,7 +80,19 @@ public class WritingMaterials {
         setPrice(price -= down);
     }
     public void draw(){
-        if(getDraw()) System.out.printf("%s провел линию. Ее цвет - %s\n\n", getName(), getColor());
+        if(getDraw()) System.out.printf("%s провел линий: 1. Их цвет - %s\n\n", getName(), getColor());
+        else System.out.printf("%s не может ничего нарисовать\n\n", getName());
+    }
+    public void draw(int n){
+        if(getDraw()) System.out.printf("%s провел линий: %d. Их цвет - %s\n\n", getName(), n, getColor());
+        else System.out.printf("%s не может ничего нарисовать\n\n", getName());
+    }
+    public void draw(String color){
+        if(getDraw()) System.out.printf("%s провел линий: 1. Их цвет - %s\n\n", getName(), color);
+        else System.out.printf("%s не может ничего нарисовать\n\n", getName());
+    }
+    public void draw(String color, int n){
+        if(getDraw()) System.out.printf("%s провел линий: %d. Их цвет - %s\n\n", getName(), n, color);
         else System.out.printf("%s не может ничего нарисовать\n\n", getName());
     }
 }

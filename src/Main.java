@@ -21,36 +21,37 @@ public class Main {
 //        System.out.println(duck.getWalk());
 //        System.out.println(duck.getFly());
 
-        WritingMaterials pen = new WritingMaterials();
-        pen.setName("Ручка");
-        pen.setColor("Красный");
-        pen.setLength(11.6);
-        pen.setPrice(167);
-        pen.setDraw(true);
-        pen.display();
-        pen.draw();
-        pen.priceDown(10);
-        pen.display();
-        pen.priceUp(23);
-        pen.display();
-        pen.replace_rod("Синий");
-        pen.draw();
+        Pen p = new Pen("ручка", "Красный", 145, 15.6, false, 0, true);
+        p.display();
+        p.setName("Паркер");
+        p.display();
+        p.setCountColor(2);
+        p.setAuto(false);
+        System.out.println(p.getCountColor());
+        System.out.println(p.getAuto());
+        p.display();
+        p.writeMyName();
 
-        WritingMaterials ruler = new WritingMaterials("Линейка", 34);
-        System.out.println(ruler.getName());
-        System.out.println(ruler.getColor());
-        System.out.println(ruler.getLength());
-        System.out.println(ruler.getPrice());
-        System.out.println(ruler.getDraw());
-        ruler.display();
-        ruler.draw();
+        Ruler r = new Ruler("линейка", "желтая", 145, 15.6, true, 15.6, false);
+        r.display();
+        r.setName("Линейка");
+        r.display();
+        r.setLength2(25);
+        r.setWood(true);
+        System.out.println(r.getLength2());
+        System.out.println(r.getWood());
+        r.display();
+        r.measure();
 
-        WritingMaterials wm1 = new WritingMaterials(23, 67.8, false);
-        wm1.display();
-        wm1.draw();
-
-        WritingMaterials wm2 = new WritingMaterials("Циркуль", "Зелёный");
-        wm2.display();
-        wm2.draw();
+        Divider d = new Divider("циркуль", "синий", 145, 15.6, false, "без карандаша", false);
+        d.display();
+        d.setName("Циркуль");
+        d.display();
+        d.setDividerType("С карандашом");
+        d.setMetal(true);
+        System.out.println(d.getDividerType());
+        System.out.println(d.getMetal());
+        r.display();
+        d.draw_circle();
     }
 }
