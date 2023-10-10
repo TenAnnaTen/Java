@@ -78,7 +78,7 @@ public class Animal {
         return this.isWalk;
     }
 
-    private static String YesNo(boolean a){
+    protected static String YesNo(boolean a){
         if(a) return "Да";
         else return "Нет";
     }
