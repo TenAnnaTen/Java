@@ -1,4 +1,4 @@
-public class Fish extends Animal{
+public final class Fish extends Animal{
     private String squama;
     private boolean upStreamSwim;
 
@@ -22,7 +22,5 @@ public class Fish extends Animal{
     public void bul_bul(){
         System.out.println("Bul-bul\n");
     }
-
-
 
 }

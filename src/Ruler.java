@@ -1,4 +1,4 @@
-public class Ruler extends WritingMaterials{
+public final class Ruler extends WritingMaterials{
     private double length2;
     boolean wood;
     {

@@ -26,7 +26,7 @@ public class Divider extends WritingMaterials{
     public void setMetal(boolean metal) {
         this.metal = metal;
     }
-    public void draw_circle(){
+    public final void draw_circle(){
         System.out.println("Нарисован круг\n");
     }
     @Override

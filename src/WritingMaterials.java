@@ -1,21 +1,28 @@
 public class WritingMaterials {
-    private String name;
-    private String color;
+    private static String name;
+    private static String color;
     private int price;
     private double length;
     private boolean draw;
+    static final String description;
+    static int counter;
     {
-        name = "No name";
-        color = "No Color";
         price = 0;
         length = 0;
         draw = false;
     }
+    static{
+        counter = 0;
+        name = "No name";
+        color = "No Color";
+        description = "Класс WritingMaterials с полями: color(цвет), name(название), price(цена)," +
+                " length(длина), draw (возможность рисовать)\n";
+    }
     public void setName(String name){
-        this.name = name;
+        name = name;
     }
     public void setColor(String color){
-        this.color = color;
+        color = color;
     }
     public void setLength(double length){
         this.length = length;
@@ -27,10 +34,10 @@ public class WritingMaterials {
         this.draw = draw;
     }
     public String getName(){
-       return this.name;
+       return name;
     }
     public String getColor(){
-        return this.color;
+        return color;
     }
     public double getLength(){
         return this.length;
@@ -41,21 +48,25 @@ public class WritingMaterials {
     public boolean getDraw(){
        return this.draw;
     }
-    WritingMaterials(){}
+    WritingMaterials(){counter += 1;}
     public WritingMaterials(String name, String color){
+        counter += 1;
         setName(name);
         setColor(color);
     }
     public WritingMaterials(String name, int price){
+        counter += 1;
         setName(name);
         setPrice(price);
     }
     public WritingMaterials(int price, double length, boolean draw){
+        counter += 1;counter += 1;
         setLength(length);
         setPrice(price);
         setDraw(draw);
     }
     public WritingMaterials(String name, String color, int price, double length, boolean draw){
+        counter += 1;
         setName(name);
         setColor(color);
         setLength(length);
@@ -94,5 +105,12 @@ public class WritingMaterials {
     public void draw(String color, int n){
         if(getDraw()) System.out.printf("%s провел линий: %d. Их цвет - %s\n\n", getName(), n, color);
         else System.out.printf("%s не может ничего нарисовать\n\n", getName());
+    }
+    public static void what2(){
+        System.out.println("Это статический метод класса WritingMaterials\n");
+    }
+    public String toString(){
+        return "Номер: " + counter + "\n" + "Название: " + getName() + "\n" + "Цвет: " + getColor() + "\n" + "Цена: " +
+                getPrice() + "\n" + "Длина: " + getLength() + "\n" + "Умеет рисовать: " + DaNet(getDraw()) + "\n";
     }
 }
