@@ -1,21 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        Animal.what();
-        System.out.println(Animal.description);
-
-        Animal duck = new Animal("Утка", "Утя", 3, 5.8, true, true, true);
-        System.out.print(duck.toString());
-
-
-        Bird b = new Bird();
-        b.setName("Bob");
-        b.display();
-        b.setArea("На югах");
-        b.setWinterFly(false);
-        System.out.println(b.getArea());
-        System.out.println(b.getWinterFly());
-        b.chirik_chirik();
-        System.out.print(b.toString());
+//        Animal.what();
+//        System.out.println(Animal.description);
+//
+//        Animal duck = new Animal("Утка", "Утя", 3, 5.8, true, true, true);
+//        System.out.print(duck.toString());
+//
+//
+//        Bird b = new Bird();
+//        b.setName("Bob");
+//        b.display();
+//        b.setArea("На югах");
+//        b.setWinterFly(false);
+//        System.out.println(b.getArea());
+//        System.out.println(b.getWinterFly());
+//        b.chirik_chirik();
+//        System.out.print(b.toString());
 //
 //        Fish f = new Fish();
 //        f.setName("Сельд");
@@ -68,5 +68,11 @@ public class Main {
 //        System.out.println(d.getMetal());
 //        r.display();
 //        d.draw_circle();
+
+        Library l = new Library();
+        System.out.println(l.toString("Каша"));
+        l.display();
+        l.Books('+', 8);
+        l.display();
     }
 }

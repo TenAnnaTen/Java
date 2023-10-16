@@ -1,17 +1,17 @@
-public class Library extends Building{
+public class ShoppingCenter extends Building{
     private String owner;
-    private int countBooks;
+    private int countShops;
     private boolean isWork;
     {
         owner = "None";
-        countBooks = 0;
+        countShops = 0;
         isWork = false;
     }
-    Library(){}
-    Library(String name, String adress, int year, String nameArch, boolean isCulture, String owner, int countBooks, boolean isWork){
+    ShoppingCenter(){}
+    ShoppingCenter(String name, String adress, int year, String nameArch, boolean isCulture, String owner, int countShops, boolean isWork){
         super(name, adress, year, nameArch, isCulture);
         setOwner(owner);
-        setCountBooks(countBooks);
+        setCountShops(countShops);
         setWork(isWork);
 
     }
@@ -24,12 +24,12 @@ public class Library extends Building{
         this.owner = owner;
     }
 
-    public int getCountBooks() {
-        return countBooks;
+    public int getCountShops() {
+        return countShops;
     }
 
-    public void setCountBooks(int countBooks) {
-        this.countBooks = countBooks;
+    public void setCountShops(int countShops) {
+        this.countShops = countShops;
     }
 
     public boolean getWork() {
@@ -45,17 +45,17 @@ public class Library extends Building{
     }
     public void display(){
         System.out.printf("Название: %s\nАдрес: %s\nГод постройки: %d\nАрхитектор: %s\nКультурный памятник: %s\nВладелец: %s\n" +
-                "Количество книг: %d\nРаботает: %s\n\n", getName(), getAdress(), getYear(), getNameArch(), getCulture() ? "Да" : "Нет",
-                getOwner(), getCountBooks(), getWork() ? "Да" : "Нет");
+                        "Количество магазинов: %d\nРаботает: %s\n\n", getName(), getAdress(), getYear(), getNameArch(), getCulture() ? "Да" : "Нет",
+                getOwner(), getCountShops(), getWork() ? "Да" : "Нет");
     }
 
     public void Books(char c, int n){
         switch (c){
             case '+':
-                setCountBooks(countBooks + n);
+                setCountShops(countShops + n);
                 break;
             case '-':
-                setCountBooks(countBooks - n);
+                setCountShops(countShops - n);
                 break;
             default:
                 System.out.println("Ошибка");
