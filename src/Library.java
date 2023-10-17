@@ -1,4 +1,4 @@
-public class Library extends Building{
+public class Library extends Building implements SocialHouse{
     private String owner;
     private int countBooks;
     private boolean isWork;
@@ -61,5 +61,21 @@ public class Library extends Building{
                 System.out.println("Ошибка");
                 break;
         }
+    }
+
+
+    @Override
+    public void whoOwner(){
+        System.out.printf("Влделец: %s", getOwner());
+    }
+
+    @Override
+    public void grafic() {
+        System.out.println("Пн-Пт: 9.00-18.00");
+    }
+
+    @Override
+    public void price() {
+        System.out.println("Разовое посещение без карты читателя - 100р\nПосещение с картой - бесплатно\n");
     }
 }

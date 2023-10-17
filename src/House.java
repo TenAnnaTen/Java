@@ -1,4 +1,6 @@
-public class House extends Building{
+import java.util.Scanner;
+
+public class House extends Building implements LivingHouse{
     private String owner;
     private int countPeople;
     private boolean isOld;
@@ -59,6 +61,31 @@ public class House extends Building{
                 break;
             default:
                 System.out.println("Ошибка");
+                break;
+        }
+    }
+    public void showName(){
+        System.out.printf("Это %s", getClass().getName());
+    }
+    public void whoOwner(){
+        System.out.printf("Влделец: %s", getOwner());
+    }
+    Scanner s = new Scanner(System.in);
+    public void cleaning(){
+        System.out.println("Введите номер дня недели: ");
+        int n = s.nextInt();
+
+        switch (n){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+                System.out.println("Ответственный за уборку: Иванов И.И.\n");
+                break;
+            case 2:
+            case 4:
+            case 6:
+                System.out.println("Ответственный за уборку: Петров П.П.\n");
                 break;
         }
     }

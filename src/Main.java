@@ -74,5 +74,8 @@ public class Main {
         l.display();
         l.Books('+', 8);
         l.display();
+
+        HighRiseBuilding h = new HighRiseBuilding();
+        h.showName();
     }
 }
