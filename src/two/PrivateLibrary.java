@@ -1,26 +1,26 @@
 package two;
+
 import java.util.Arrays;
-import java.util.Locale;
 import java.util.Scanner;
 
-public final class PublicLibrary extends Library implements Books{
+public class PrivateLibrary extends Library implements Books{
     final String status;
     private int countReader;
-    private String sponsor;
     private final int countBook;
+    private int price;
     public static String opis;
     {
-        status = "Публичная";
+        status = "Частная";
         countBook = 0;
         countReader = 0;
-        sponsor = "None";
+        price = 0;
     }
     static{
-        opis = "График работы:\nПн-Ср-Пт: 10.00-22.00\nВт-Чт: выходные\nCб-Вс: 11.00-18.00";
+        opis = "Пн-Пт: 9.00-22.00\nCб-Вс: 12.00-18.00";
     }
-    PublicLibrary(){}
-    PublicLibrary(String name, int year, String owner, int countBook, String address, int countRoom, String status,
-                  int countReader, String sponsor){
+    PrivateLibrary(){}
+    PrivateLibrary(String name, int year, String owner, int countBook, String address, int countRoom, String status,
+                   int countReader, int price){
         name = super.getName();
         year = super.getYear();
         owner = super.getOwner();
@@ -29,7 +29,7 @@ public final class PublicLibrary extends Library implements Books{
         countRoom = super.getCountRoom();
         status = "Публичная";
         countReader = getCountReader();
-        sponsor = getSponsor();
+        price = getPrice();
     }
 
     public int getCountReader() {
@@ -40,14 +40,13 @@ public final class PublicLibrary extends Library implements Books{
         this.countReader = countReader;
     }
 
-    public String getSponsor() {
-        return sponsor;
+    public int getPrice() {
+        return price;
     }
 
-    public void setSponsor(String sponsor) {
-        this.sponsor = sponsor;
+    public void setPrice(int price) {
+        this.price = price;
     }
-
 
     @Override
     public void addBooks() {
@@ -96,5 +95,4 @@ public final class PublicLibrary extends Library implements Books{
     public int getCountBook() {
         return books.size();
     }
-
 }

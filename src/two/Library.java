@@ -4,14 +4,12 @@ public abstract class Library {
     private String name;
     private int year;
     private String owner;
-    private int countBook;
     private String address;
     private int countRoom;
     {
         name = "None";
         year = 0;
         owner = "None";
-        countBook = 0;
         address = "None";
         countRoom = 0;
     }
@@ -38,14 +36,6 @@ public abstract class Library {
 
     public void setOwner(String owner) {
         this.owner = owner;
-    }
-
-    public int getCountBook() {
-        return countBook;
-    }
-
-    public void setCountBook(int countBook) {
-        this.countBook = countBook;
     }
 
     public String getAddress() {
