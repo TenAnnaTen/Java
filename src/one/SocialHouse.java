@@ -1,3 +1,5 @@
+package one;
+
 public interface SocialHouse {
     void whoOwner();
     void grafic();

@@ -1,4 +1,6 @@
-public class Divider extends WritingMaterials{
+package one;
+
+public class Divider extends WritingMaterials {
     private String dividerType;
     private boolean metal;
     {

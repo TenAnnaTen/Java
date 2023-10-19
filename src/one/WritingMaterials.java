@@ -1,3 +1,5 @@
+package one;
+
 public class WritingMaterials {
     private static String name;
     private static String color;
@@ -15,7 +17,7 @@ public class WritingMaterials {
         counter = 0;
         name = "No name";
         color = "No Color";
-        description = "Класс WritingMaterials с полями: color(цвет), name(название), price(цена)," +
+        description = "Класс one.WritingMaterials с полями: color(цвет), name(название), price(цена)," +
                 " length(длина), draw (возможность рисовать)\n";
     }
     public void setName(String name){
@@ -107,7 +109,7 @@ public class WritingMaterials {
         else System.out.printf("%s не может ничего нарисовать\n\n", getName());
     }
     public static void what2(){
-        System.out.println("Это статический метод класса WritingMaterials\n");
+        System.out.println("Это статический метод класса one.WritingMaterials\n");
     }
     public String toString(){
         return "Номер: " + counter + "\n" + "Название: " + getName() + "\n" + "Цвет: " + getColor() + "\n" + "Цена: " +

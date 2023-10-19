@@ -1,3 +1,5 @@
+package one;
+
 public class Animal {
     private String type;
     private String name;
@@ -20,7 +22,7 @@ public class Animal {
     }
     static{
         counter = 0;
-        description = "Класс Animal с полями: type(тип животного), name(имя животного), age(возраст животного)," +
+        description = "Класс one.Animal с полями: type(тип животного), name(имя животного), age(возраст животного)," +
                 " weight(вес животного), isFly, isWalk, isSwim (возможность животного летать, гулять и плавать соответственно)\n";
     }
     public Animal(){
@@ -107,7 +109,7 @@ public class Animal {
         setWeight(weight += kg);
     }
     public static void what(){
-        System.out.println("Это статический метод класса Animal\n");
+        System.out.println("Это статический метод класса one.Animal\n");
     }
     public String toString(){
         return "Номер: " + counter + "\n" + "Тип: " + getType() + "\n" + "Имя: " + getName() + "\n" + "Возраст: " +

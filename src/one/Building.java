@@ -1,3 +1,5 @@
+package one;
+
 public abstract class Building {
     private String name;
     private String adress;

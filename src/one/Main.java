@@ -1,13 +1,18 @@
+package one;
+
+import one.HighRiseBuilding;
+import one.Library;
+
 public class Main {
     public static void main(String[] args) {
-//        Animal.what();
-//        System.out.println(Animal.description);
+//        one.Animal.what();
+//        System.out.println(one.Animal.description);
 //
-//        Animal duck = new Animal("Утка", "Утя", 3, 5.8, true, true, true);
+//        one.Animal duck = new one.Animal("Утка", "Утя", 3, 5.8, true, true, true);
 //        System.out.print(duck.toString());
 //
 //
-//        Bird b = new Bird();
+//        one.Bird b = new one.Bird();
 //        b.setName("Bob");
 //        b.display();
 //        b.setArea("На югах");
@@ -17,7 +22,7 @@ public class Main {
 //        b.chirik_chirik();
 //        System.out.print(b.toString());
 //
-//        Fish f = new Fish();
+//        one.Fish f = new one.Fish();
 //        f.setName("Сельд");
 //        f.display();
 //        f.setSquama("Крупная");
@@ -26,7 +31,7 @@ public class Main {
 //        System.out.println(f.getUpStreamSwim());
 //        f.bul_bul();
 //
-//        Insect i = new Insect();
+//        one.Insect i = new one.Insect();
 //        i.setName("Жук жукыч");
 //        i.display();
 //        i.setWingCont(4);
@@ -36,7 +41,7 @@ public class Main {
 //        i.ggggg();
 //
 //
-//        Pen p = new Pen("ручка", "Красный", 145, 15.6, false, 0, true);
+//        one.Pen p = new one.Pen("ручка", "Красный", 145, 15.6, false, 0, true);
 //        p.display();
 //        p.setName("Паркер");
 //        p.display();
@@ -47,7 +52,7 @@ public class Main {
 //        p.display();
 //        p.writeMyName();
 //
-//        Ruler r = new Ruler("линейка", "желтая", 145, 15.6, true, 15.6, false);
+//        one.Ruler r = new one.Ruler("линейка", "желтая", 145, 15.6, true, 15.6, false);
 //        r.display();
 //        r.setName("Линейка");
 //        r.display();
@@ -58,7 +63,7 @@ public class Main {
 //        r.display();
 //        r.measure();
 //
-//        Divider d = new Divider("циркуль", "синий", 145, 15.6, false, "без карандаша", false);
+//        one.Divider d = new one.Divider("циркуль", "синий", 145, 15.6, false, "без карандаша", false);
 //        d.display();
 //        d.setName("Циркуль");
 //        d.display();

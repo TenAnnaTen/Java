@@ -1,4 +1,8 @@
-public class PoliceDepartment extends Building{
+package one;
+
+import one.Building;
+
+public class PoliceDepartment extends Building {
     private int uch;
     private int countWorkers;
     private boolean isBusy;

@@ -1,4 +1,8 @@
-public final class Fish extends Animal{
+package one;
+
+import one.Animal;
+
+public final class Fish extends Animal {
     private String squama;
     private boolean upStreamSwim;
 

@@ -1,4 +1,6 @@
-public final class Ruler extends WritingMaterials{
+package one;
+
+public final class Ruler extends WritingMaterials {
     private double length2;
     boolean wood;
     {

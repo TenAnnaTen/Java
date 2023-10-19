@@ -1,17 +1,21 @@
-public class University extends Building{
+package one;
+
+import one.Building;
+
+public class ShoppingCenter extends Building {
     private String owner;
-    private int countStudents;
+    private int countShops;
     private boolean isWork;
     {
         owner = "None";
-        countStudents = 0;
+        countShops = 0;
         isWork = false;
     }
-    University(){}
-    University(String name, String adress, int year, String nameArch, boolean isCulture, String owner, int countStudent, boolean isWork){
+    ShoppingCenter(){}
+    ShoppingCenter(String name, String adress, int year, String nameArch, boolean isCulture, String owner, int countShops, boolean isWork){
         super(name, adress, year, nameArch, isCulture);
         setOwner(owner);
-        setCountStudents(countStudents);
+        setCountShops(countShops);
         setWork(isWork);
 
     }
@@ -24,12 +28,12 @@ public class University extends Building{
         this.owner = owner;
     }
 
-    public int getCountStudents() {
-        return countStudents;
+    public int getCountShops() {
+        return countShops;
     }
 
-    public void setCountStudents(int countStudents) {
-        this.countStudents = countStudents;
+    public void setCountShops(int countShops) {
+        this.countShops = countShops;
     }
 
     public boolean getWork() {
@@ -45,17 +49,17 @@ public class University extends Building{
     }
     public void display(){
         System.out.printf("Название: %s\nАдрес: %s\nГод постройки: %d\nАрхитектор: %s\nКультурный памятник: %s\nВладелец: %s\n" +
-                        "Количество студентов: %d\nРаботает: %s\n\n", getName(), getAdress(), getYear(), getNameArch(), getCulture() ? "Да" : "Нет",
-                getOwner(), getCountStudents(), getWork() ? "Да" : "Нет");
+                        "Количество магазинов: %d\nРаботает: %s\n\n", getName(), getAdress(), getYear(), getNameArch(), getCulture() ? "Да" : "Нет",
+                getOwner(), getCountShops(), getWork() ? "Да" : "Нет");
     }
 
     public void Books(char c, int n){
         switch (c){
             case '+':
-                setCountStudents(countStudents + n);
+                setCountShops(countShops + n);
                 break;
             case '-':
-                setCountStudents(countStudents - n);
+                setCountShops(countShops - n);
                 break;
             default:
                 System.out.println("Ошибка");

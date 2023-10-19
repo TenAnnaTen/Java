@@ -1,4 +1,8 @@
-public class Insect extends Animal{
+package one;
+
+import one.Animal;
+
+public class Insect extends Animal {
     private int wingCont;
     private boolean likeJesus;
     {

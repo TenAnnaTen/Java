@@ -1,4 +1,8 @@
-public class Library extends Building implements SocialHouse{
+package one;
+
+import one.Building;
+
+public class Library extends Building implements SocialHouse {
     private String owner;
     private int countBooks;
     private boolean isWork;

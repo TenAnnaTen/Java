@@ -1,4 +1,8 @@
-public class Bird extends Animal{
+package one;
+
+import one.Animal;
+
+public class Bird extends Animal {
     private String area;
     private boolean winterFly;
 

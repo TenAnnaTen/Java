@@ -1,19 +1,24 @@
+package one;
+
+import one.Building;
+
 import java.util.Scanner;
-public class HighRiseBuilding extends Building implements LivingHouse{
+
+public class House extends Building implements LivingHouse {
     private String owner;
-    private int countFloor;
-    private boolean isWork;
+    private int countPeople;
+    private boolean isOld;
     {
         owner = "None";
-        countFloor = 0;
-        isWork = false;
+        countPeople = 0;
+        isOld = false;
     }
-    HighRiseBuilding(){}
-    HighRiseBuilding(String name, String adress, int year, String nameArch, boolean isCulture, String owner, int countFloor, boolean isWork){
+    House(){}
+    House(String name, String adress, int year, String nameArch, boolean isCulture, String owner, int countPeople, boolean isOld){
         super(name, adress, year, nameArch, isCulture);
         setOwner(owner);
-        setCountFloor(countFloor);
-        setWork(isWork);
+        setCountPeople(countPeople);
+        setWork(isOld);
 
     }
 
@@ -25,20 +30,20 @@ public class HighRiseBuilding extends Building implements LivingHouse{
         this.owner = owner;
     }
 
-    public int getCountFloor() {
-        return countFloor;
+    public int getCountPeople() {
+        return countPeople;
     }
 
-    public void setCountFloor(int countFloor) {
-        this.countFloor = countFloor;
+    public void setCountPeople(int countPeople) {
+        this.countPeople = countPeople;
     }
 
-    public boolean getWork() {
-        return isWork;
+    public boolean getOld() {
+        return isOld;
     }
 
     public void setWork(boolean work) {
-        isWork = work;
+        isOld = work;
     }
 
     public String toString(String a){
@@ -46,24 +51,23 @@ public class HighRiseBuilding extends Building implements LivingHouse{
     }
     public void display(){
         System.out.printf("Название: %s\nАдрес: %s\nГод постройки: %d\nАрхитектор: %s\nКультурный памятник: %s\nВладелец: %s\n" +
-                        "Количество этажей: %d\nРаботает: %s\n\n", getName(), getAdress(), getYear(), getNameArch(), getCulture() ? "Да" : "Нет",
-                getOwner(), getCountFloor(), getWork() ? "Да" : "Нет");
+                        "Количество жильцов: %d\nСтарая постройка: %s\n\n", getName(), getAdress(), getYear(), getNameArch(), getCulture() ? "Да" : "Нет",
+                getOwner(), getCountPeople(), getOld() ? "Да" : "Нет");
     }
 
-    public void Books(char c, int n){
+    public void People(char c, int n){
         switch (c){
             case '+':
-                setCountFloor(countFloor + n);
+                setCountPeople(countPeople + n);
                 break;
             case '-':
-                setCountFloor(countFloor - n);
+                setCountPeople(countPeople - n);
                 break;
             default:
                 System.out.println("Ошибка");
                 break;
         }
     }
-
     public void showName(){
         System.out.printf("Это %s", getClass().getName());
     }

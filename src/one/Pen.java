@@ -1,4 +1,6 @@
-public class Pen extends WritingMaterials{
+package one;
+
+public class Pen extends WritingMaterials {
     private int countColor;
     private boolean auto;
     {
