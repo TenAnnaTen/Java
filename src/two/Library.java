@@ -13,6 +13,15 @@ public abstract class Library {
         address = "None";
         countRoom = 0;
     }
+    Library(){}
+    Library(String name, int year, String owner, String address, int countRoom){
+        setName(name);
+        setYear(year);
+        setOwner(owner);
+        setAddress(address);
+        setCountRoom(countRoom);
+
+    }
 
     public String getName() {
         return name;
