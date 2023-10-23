@@ -1,10 +1,10 @@
-package two;
+package two.L;
 
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class PrivateLibrary extends Library implements Books, Readers, Price, Workers{
+public class PrivateLibrary extends Library implements Books, Readers, Price, Workers {
     final String status;
     private int countReader;
     private final int countBook;

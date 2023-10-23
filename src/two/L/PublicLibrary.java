@@ -1,9 +1,10 @@
-package two;
+package two.L;
+
 import java.util.Arrays;
 import java.util.TreeMap;
 import java.util.Scanner;
 
-public final class PublicLibrary extends Library implements Books, Readers, Sponsors, Workers, ZP{
+public final class PublicLibrary extends Library implements Books, Readers, Sponsors, Workers, ZP {
     final String status;
     private int countReader;
     private TreeMap<String, Integer> sponsor;
