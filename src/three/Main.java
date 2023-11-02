@@ -1,11 +1,36 @@
 package three;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        String[] b = {"+", "-", "*", "/"};
-        String a = s.nextLine();
+        String a = null;
+
+        System.out.println("Ввести выражение вручную - 1, Прочитать с файла - 2:");
+        int vibor = s.nextInt();
+        s.nextLine();
+        switch(vibor){
+            case 1:
+                a = s.nextLine();
+                break;
+            case 2:
+                a = "";
+                try(FileReader reader = new FileReader("input.txt")){
+                    int c;
+                    while((c=reader.read())!=-1){
+                        a += (char)c;
+                    }
+                    System.out.println(a);
+                }catch (IOException ex){
+                    System.out.println(ex.getMessage());
+                }
+                break;
+        }
+
+        int res = 0;
         try{
             String[] a1 = a.split(" ");
             int a3, a2;
@@ -15,16 +40,16 @@ public class Main {
             a4 = a1[1];
             switch (a4){
                 case "+":
-                    System.out.println(a2+a3);
+                    res = a2+a3;
                     break;
                 case "-":
-                    System.out.println(a2-a3);
+                    res = a2-a3;
                     break;
                 case "*":
-                    System.out.println(a2*a3);
+                    res = a2*a3;
                     break;
                 case "/":
-                    System.out.println(a2/a3);
+                    res = a2/a3;
                     break;
                 default:
                     throw new Exception("Operation Error!");
@@ -36,5 +61,21 @@ public class Main {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
+        System.out.println("Вывести результат консоль - 1, Записать в файл - 2:");
+        int vibor2 = s.nextInt();
+        switch(vibor2){
+            case 1:
+                System.out.println(res);
+                break;
+            case 2:
+                try(FileWriter writer = new FileWriter("output.txt", false)){
+                    writer.write(res + "");
+                }catch (IOException ex){
+                    System.out.println(ex.getMessage());
+                }
+                break;
+        }
+
     }
 }
