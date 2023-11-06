@@ -28,9 +28,12 @@ public class Main {
                     System.out.println(ex.getMessage());
                 }
                 break;
+            default:
+                System.out.println("Неправильно введено значение");
+                break;
         }
 
-        int res = 0;
+        String res = "";
         try{
             String[] a1 = a.split(" ");
             int a3, a2;
@@ -40,26 +43,26 @@ public class Main {
             a4 = a1[1];
             switch (a4){
                 case "+":
-                    res = a2+a3;
+                    res = (a2+a3) + "";
                     break;
                 case "-":
-                    res = a2-a3;
+                    res = (a2-a3) + "";
                     break;
                 case "*":
-                    res = a2*a3;
+                    res = (a2*a3) + "";
                     break;
                 case "/":
-                    res = a2/a3;
+                    res = (a2/a3) + "";
                     break;
                 default:
                     throw new Exception("Operation Error!");
             }
         }catch (NumberFormatException e){
-            System.out.println("Error! Not number");
+            res = "Error! Not number";
         } catch (ArithmeticException e) {
-            System.out.println("Error! Division by zero");
+            res = "Error! Division by zero";
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            res = e.getMessage();
         }
 
         System.out.println("Вывести результат консоль - 1, Записать в файл - 2:");
@@ -70,10 +73,13 @@ public class Main {
                 break;
             case 2:
                 try(FileWriter writer = new FileWriter("output.txt", false)){
-                    writer.write(res + "");
+                    writer.write(res);
                 }catch (IOException ex){
                     System.out.println(ex.getMessage());
                 }
+                break;
+            default:
+                System.out.println("Неправильно введено значение");
                 break;
         }
 
