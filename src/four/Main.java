@@ -33,14 +33,14 @@ public class Main extends Canvas {
         int screamHeadHeight = screamHead.getHeight();//запоминаем ее размер
         JLabel wIcon = new JLabel(new ImageIcon(screamHead)); //создаем объект с картинкой, который будем размещать и двигать
         int startX = (int) (Math.random() * (width - screamHeadWidth)),
-                startY = (int) (Math.random() * (heigth - screamHeadWidth));//новые рандомные координаты
+                startY = (int) (Math.random() * (heigth - screamHeadHeight));//новые рандомные координаты
         wIcon.setBounds(startX, startY, screamHeadWidth, screamHeadHeight);//устанавливаем начальное положение картинки
         frame.add(wIcon);//добавляем картинку на форму
 
         //делаем бесконечный цикл перемещения
         while (true){
             int newX = (int) (Math.random() * (width - screamHeadWidth)),
-                    newY = (int) (Math.random() * (heigth - screamHeadWidth));//задаем новую точку
+                    newY = (int) (Math.random() * (heigth - screamHeadHeight));//задаем новую точку
             int[][] path = drawBresenhamLine(startX, startY, newX, newY);//получаем путь(список координат к новой точке)
             startX = newX;
             startY = newY;
@@ -76,7 +76,7 @@ public class Main extends Canvas {
             pdx = incx;
             pdy = 0;
             es = dy;
-            el = dy;
+            el = dx;
         }else{
             pdx = 0;
             pdy = incy;
@@ -86,7 +86,7 @@ public class Main extends Canvas {
         x = xstart;
         y = ystart;
         err = el / 2;
-        int[][] a = new int[el = 1][2];
+        int[][] a = new int[el + 1][2];
         a[0][0] = x;
         a[0][1] = y;
         for(int t = 0; t < el; t++){
