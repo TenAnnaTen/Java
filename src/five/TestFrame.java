@@ -1,15 +1,15 @@
 package five;
 
-import java.awt.Dimension;
+import java.awt.Dimension;  //для размера окна
 import java.awt.FlowLayout;
-import java.awt.Event;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.Event; //для работы событий и слушателей
+import java.awt.event.ActionEvent;  //для событий
+import java.awt.event.ActionListener;  //для слушателей
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.JButton;  //для кнопок
+import javax.swing.JFrame;  //для создания приложения
+import javax.swing.JPanel;  //для панели
+import javax.swing.JTextField;  //для элемента с текстом
 
 public class TestFrame extends JFrame{
     private static final long serialVersionUID = 1L;
