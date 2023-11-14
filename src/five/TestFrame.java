@@ -1,7 +1,7 @@
 package five;
 
 import java.awt.Dimension;  //для размера окна
-import java.awt.FlowLayout;
+import java.awt.FlowLayout;  //для расположения элементов
 import java.awt.Event; //для работы событий и слушателей
 import java.awt.event.ActionEvent;  //для событий
 import java.awt.event.ActionListener;  //для слушателей
@@ -11,28 +11,28 @@ import javax.swing.JFrame;  //для создания приложения
 import javax.swing.JPanel;  //для панели
 import javax.swing.JTextField;  //для элемента с текстом
 
-public class TestFrame extends JFrame{
+public class TestFrame extends JFrame{ // наследование класса JFrame для работы с графическим интрефейсом
     private static final long serialVersionUID = 1L;
 
-    private JTextField textField;
-    private JButton button1;
+    private JTextField textField;  //для текстового поля
+    private JButton button1;  //кнопки
     private JButton button2;
     private JButton button3;
     public TestFrame(){
-        super("Test frame");
-        createGUI();
+        super("Test frame");  //заголовок
+        createGUI();  //вызов метода для создания приложения
     }
     public void createGUI(){
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  //определяем выход
 
-        JPanel panel = new JPanel();
+        JPanel panel = new JPanel();  //объект панели для расположения элементов
         panel.setLayout(new FlowLayout());
 
-        button1 = new JButton("Button 1");
-        button1.setActionCommand("Button 1 was pressed");
-        panel.add(button1);
+        button1 = new JButton("Button 1");  //кнопка 1 с текстом на ней
+        button1.setActionCommand("Button 1 was pressed");  //определяем действие при нажатии
+        panel.add(button1);  //добавляем кнопку на панель
 
-        button2 = new JButton("Button 2");
+        button2 = new JButton("Button 2");  //то же самое
         button2.setActionCommand("Button 2 was pressed");
         panel.add(button2);
 
@@ -40,18 +40,18 @@ public class TestFrame extends JFrame{
         button3.setActionCommand("Button 3 was pressed");
         panel.add(button3);
 
-        textField = new JTextField();
-        textField.setColumns(23);
-        panel.add(textField);
+        textField = new JTextField();  //объект для текствого поля
+        textField.setColumns(23);  //определяем размерность текстового поля
+        panel.add(textField);  //добавляем текстовое поле на панель
 
-        ActionListener actionListener = new TestActionListener();
+        ActionListener actionListener = new TestActionListener();  //объект с методом, выполняющим действие с кнопками
 
-        button1.addActionListener(actionListener);
+        button1.addActionListener(actionListener);  //добавляем к кнопкам эти действия
         button2.addActionListener(actionListener);
         button3.addActionListener(actionListener);
 
-        getContentPane().add(panel);
-        setPreferredSize(new Dimension(320, 100));
+        getContentPane().add(panel);  //добавление панели в приложение
+        setPreferredSize(new Dimension(320, 100));  //определяем размер окна
     }
 
     public class TestActionListener implements ActionListener{
