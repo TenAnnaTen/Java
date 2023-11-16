@@ -55,6 +55,7 @@ public class TestFrame extends JFrame{ // наследование класса 
     }
 
     public class TestActionListener implements ActionListener{
+        //определение и выполнение действий при нажатии кнопок
         public void actionPerformed(ActionEvent e){
             JButton button = (JButton) e.getSource();
             System.out.println(button.getText() + ", " +
@@ -70,6 +71,7 @@ public class TestFrame extends JFrame{ // наследование класса 
         }
     }
     public static void main(String[] args){
+        //запуск программы
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
