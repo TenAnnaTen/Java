@@ -56,7 +56,7 @@ public class WhatWant extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e) {
             String result = JOptionPane.showInputDialog(WhatWant.this,
-                    "<html><h2>Введите название университета:").toLowerCase();
+                    "<html><h2>Введите название университета:");
             if(UniversForm.combobox1 != null) {
                 for (TechnicalUniversity t : UniversForm.combobox1) {
                     if (t.getName().equals(result)) {
@@ -70,7 +70,7 @@ public class WhatWant extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e) {
             String result = JOptionPane.showInputDialog(WhatWant.this,
-                    "<html><h2>Введите название университета:").toLowerCase();
+                    "<html><h2>Введите название университета:");
             if(UniversForm.combobox1 != null) {
                 for (TechnicalUniversity t : UniversForm.combobox1) {
                     if (t.getName().equals(result)) {
@@ -82,16 +82,17 @@ public class WhatWant extends JFrame{
                         switch (A){
                             case 1:
                                 String nazvanie = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите название предмета: ").toLowerCase();
+                                        "Введите название предмета: ");
                                 String k = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите количество: ").toLowerCase();
+                                        "Введите количество: ");
                                 int kolvo = Integer.parseInt(k);
                                 t.inventory.put(nazvanie, kolvo);
+//                                invent.put();
                                 JOptionPane.showMessageDialog(WhatWant.this, "Добавлено");
                                 break;
                             case 2:
                                 String nazvan = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите название предмета: ").toLowerCase();
+                                        "Введите название предмета: ");
                                 if(invent.containsKey(nazvan)){
                                     String kk = JOptionPane.showInputDialog(WhatWant.this,
                                             "Введите новое количество: ");
@@ -105,7 +106,7 @@ public class WhatWant extends JFrame{
                                 }
                             case 3:
                                 String naz = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите название предмета: ").toLowerCase();
+                                        "Введите название предмета: ");
                                 if(invent.containsKey(naz)){
                                     t.inventory.remove(naz);
                                     JOptionPane.showMessageDialog(WhatWant.this, "Удалено");
@@ -129,7 +130,7 @@ public class WhatWant extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e) {
             String result = JOptionPane.showInputDialog(WhatWant.this,
-                    "<html><h2>Введите название университета:").toLowerCase();
+                    "<html><h2>Введите название университета:");
             if(UniversForm.combobox1 != null) {
                 for (TechnicalUniversity t : UniversForm.combobox1) {
                     if (t.getName().equals(result)) {
@@ -143,7 +144,7 @@ public class WhatWant extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e) {
             String result = JOptionPane.showInputDialog(WhatWant.this,
-                    "<html><h2>Введите название университета:").toLowerCase();
+                    "<html><h2>Введите название университета:");
             if(UniversForm.combobox1 != null) {
                 for (TechnicalUniversity t : UniversForm.combobox1) {
                     if (t.getName().equals(result)) {
@@ -153,19 +154,19 @@ public class WhatWant extends JFrame{
                         switch (A){
                             case 1:
                                 String FIO = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите ФИО сотрудника: ").toLowerCase();
+                                        "Введите ФИО сотрудника: ");
                                 String dol = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите должность: ").toLowerCase();
+                                        "Введите должность: ");
                                 String[][] r = {{FIO, dol}};
                                 t.addWorkers(r);
                                 JOptionPane.showMessageDialog(WhatWant.this, "Добавлено");
                                 break;
                             case 2:
                                 String FI = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите ФИО сотрудника: ").toLowerCase();
+                                        "Введите ФИО сотрудника: ");
                                 if(workers.containsKey(FI)){
                                     String dl = JOptionPane.showInputDialog(WhatWant.this,
-                                            "Введите новую должность: ").toLowerCase();
+                                            "Введите новую должность: ");
                                     workers.put(FI, dl);
                                     JOptionPane.showMessageDialog(WhatWant.this, "Изменено");
                                     return;
@@ -175,7 +176,7 @@ public class WhatWant extends JFrame{
                                 }
                             case 3:
                                 String F = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите ФИО сотрудника: ").toLowerCase();
+                                        "Введите ФИО сотрудника: ");
                                 if(workers.containsKey(F)){
                                     workers.remove(F);
                                     JOptionPane.showMessageDialog(WhatWant.this, "Удалено");
@@ -198,7 +199,7 @@ public class WhatWant extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e) {
             String result = JOptionPane.showInputDialog(WhatWant.this,
-                    "<html><h2>Введите название университета:").toLowerCase();
+                    "<html><h2>Введите название университета:");
             if(UniversForm.combobox1 != null) {
                 for (TechnicalUniversity t : UniversForm.combobox1) {
                     if (t.getName().equals(result)) {
@@ -212,7 +213,7 @@ public class WhatWant extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e) {
             String result = JOptionPane.showInputDialog(WhatWant.this,
-                    "<html><h2>Введите название университета:").toLowerCase();
+                    "<html><h2>Введите название университета:");
             if(UniversForm.combobox1 != null) {
                 for (TechnicalUniversity t : UniversForm.combobox1) {
                     if (t.getName().equals(result)) {
@@ -222,10 +223,10 @@ public class WhatWant extends JFrame{
                         switch (A){
                             case 1:
                                 String group = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите группу студента: ").toLowerCase();
+                                        "Введите группу студента: ");
                                 if(students.containsKey(group)){
                                     String FIO = JOptionPane.showInputDialog(WhatWant.this,
-                                            "Введите ФИО студента: ").toLowerCase();
+                                            "Введите ФИО студента: ");
                                     TreeSet<String> novoe = new TreeSet<>();
                                     novoe.addAll(students.get(group));
                                     novoe.add(FIO);
@@ -233,7 +234,7 @@ public class WhatWant extends JFrame{
                                     JOptionPane.showMessageDialog(WhatWant.this, "Добавлено");
                                 }else{
                                     String FIO = JOptionPane.showInputDialog(WhatWant.this,
-                                            "Введите ФИО студента: ").toLowerCase();
+                                            "Введите ФИО студента: ");
                                     TreeSet<String> novoe = new TreeSet<>();
                                     novoe.add(FIO);
                                     students.put(group, novoe);
@@ -242,10 +243,10 @@ public class WhatWant extends JFrame{
                                 break;
                             case 2:
                                 String gr = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите группу студента: ").toLowerCase();
+                                        "Введите группу студента: ");
                                 if(students.containsKey(gr)){
                                     String FI = JOptionPane.showInputDialog(WhatWant.this,
-                                            "Введите ФИО студента: ").toLowerCase();
+                                            "Введите ФИО студента: ");
                                     if(students.get(gr).contains(FI)){
                                         TreeSet<String> novoe = new TreeSet<>();
                                         novoe.addAll(students.get(gr));
@@ -273,7 +274,7 @@ public class WhatWant extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e) {
             String result = JOptionPane.showInputDialog(WhatWant.this,
-                    "<html><h2>Введите название университета:").toLowerCase();
+                    "<html><h2>Введите название университета:");
             if(UniversForm.combobox1 != null) {
                 for (TechnicalUniversity t : UniversForm.combobox1) {
                     if (t.getName().equals(result)) {
@@ -284,7 +285,7 @@ public class WhatWant extends JFrame{
                         switch (A){
                             case 1:
                                 String group = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите группу: ").toLowerCase();
+                                        "Введите группу: ");
                                 for (String[] el : Schedule.schedule) {
                                     if (el[1].equals(group)){
                                         JOptionPane.showMessageDialog(WhatWant.this, Arrays.toString(el));
@@ -295,7 +296,7 @@ public class WhatWant extends JFrame{
                                 break;
                             case 2:
                                 String FIO = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите ФИО преподавателя: ").toLowerCase();
+                                        "Введите ФИО преподавателя: ");
                                 for (String[] el : Schedule.schedule) {
                                     if (el[0].equals(FIO)) JOptionPane.showMessageDialog(WhatWant.this, Arrays.toString(el));
                                     return;
@@ -321,7 +322,7 @@ public class WhatWant extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e) {
             String result = JOptionPane.showInputDialog(WhatWant.this,
-                    "<html><h2>Введите название университета:").toLowerCase();
+                    "<html><h2>Введите название университета:");
             if(UniversForm.combobox1 != null) {
                 for (TechnicalUniversity t : UniversForm.combobox1) {
                     if (t.getName().equals(result)) {
@@ -331,13 +332,13 @@ public class WhatWant extends JFrame{
                         switch (A){
                             case 1:
                                 String FIO = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите ФИО преподавателя: ").toLowerCase();
+                                        "Введите ФИО преподавателя: ");
                                 String group = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите группу: ").toLowerCase();
+                                        "Введите группу: ");
                                 String dis = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите название дисциплины: ").toLowerCase();
+                                        "Введите название дисциплины: ");
                                 String day  = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите день недели: ").toLowerCase();
+                                        "Введите день недели: ");
                                 String time = JOptionPane.showInputDialog(WhatWant.this,
                                         "Введите время пары (формат hh:mm - hh:mm): ");
                                 String[] reader = {FIO, group, dis, day, time};
@@ -345,13 +346,13 @@ public class WhatWant extends JFrame{
                                 break;
                             case 2:
                                 String FI = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите ФИО преподавателя: ").toLowerCase();
+                                        "Введите ФИО преподавателя: ");
                                 String gr = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите группу: ").toLowerCase();
+                                        "Введите группу: ");
                                 String di = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите название дисциплины: ").toLowerCase();
+                                        "Введите название дисциплины: ");
                                 String da = JOptionPane.showInputDialog(WhatWant.this,
-                                        "Введите день недели: ").toLowerCase();
+                                        "Введите день недели: ");
                                 for(String[] el : Schedule.schedule) {
                                     if (el[0].equals(FI) && el[1].equals(gr) && el[2].equals(di) && el[3].equals(da))
                                         Schedule.schedule.remove(el);
@@ -372,7 +373,7 @@ public class WhatWant extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e) {
             String result = JOptionPane.showInputDialog(WhatWant.this,
-                    "<html><h2>Введите название университета:").toLowerCase();
+                    "<html><h2>Введите название университета:");
             if(UniversForm.combobox1 != null) {
                 for (TechnicalUniversity t : UniversForm.combobox1) {
                     if (t.getName().equals(result)) {
