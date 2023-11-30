@@ -5,7 +5,7 @@ import java.util.*;
 
 
 public final class TechnicalUniversity extends University implements Inventory, Workers, Students, Schedule{
-    private TreeMap<String, Integer> inventory;
+    protected TreeMap<String, Integer> inventory;
     private int countWorker;
     private int countStudent;
     private ArrayList<String[]> schedule;

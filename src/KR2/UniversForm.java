@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class UniversForm extends JFrame {
-    protected ArrayList<String> combobox1;
+    protected static ArrayList<TechnicalUniversity> combobox1;
     private JPanel panel;
     private JLabel label1_reg;
     private JLabel label_1_reg;
@@ -28,7 +28,7 @@ public class UniversForm extends JFrame {
         int width = 1000, height = 500;
         setBounds(dim.width / 2 - width / 2, dim.height / 2 - height / 2, width, height);
 
-        combobox1 = new ArrayList<String>();
+        combobox1 = new ArrayList<TechnicalUniversity>();
 
         this.Button1_reg.addActionListener(new Button1Listener());
     }
@@ -43,7 +43,7 @@ public class UniversForm extends JFrame {
                 int countRoom = Integer.parseInt(textField4.getText());
 
                 TechnicalUniversity newUniversity = new TechnicalUniversity(name, year, address, countRoom);
-                combobox1.add(newUniversity.getName());
+                combobox1.add(newUniversity);
                 System.out.println("Items in comboBox1: " + combobox1.get(combobox1.size()-1));
                 UniversForm.this.dispose();
             } catch (NumberFormatException ex) {
